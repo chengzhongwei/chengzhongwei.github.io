@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="theme-color" content="#000000">
-	<!--
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-	<link rel="manifest" href="https://chengzhongwei.github.io/docs/packages.json">
-	<link rel="shortcut icon" href="https://chengzhongwei.github.io/docs/favicon.ico">
-	<!--
+    <link
+      rel="manifest"
+      href="https://chengzhongwei.github.io/docs/packages.json"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://chengzhongwei.github.io/docs/favicon.ico"
+    />
+    <!--
       Notice the use of https://chengzhongwei.github.io in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -20,17 +28,76 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-	<title>Homepage</title>
-</head>
+    <title>Homepage</title>
+  </head>
 
-<body>
-	<noscript>
-		You need to enable JavaScript to run this app.
-  </noscript>
-  <h1>Keika</h1>
-	<a href="about.html">About us</a>
-	<br>
-	<a href="/src/about.html">About us</a>
-</body>
+  <body style="background-color: lightblue;">
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <h1 class="title">Welcome to Gear Up your lifestyle</h1>
+    <ul class="navbar">
+      <li class="nav-item"><a href="/">Home</a></li>
+      <li class="nav-item"><a href="/news.html">News</a></li>
+      <li class="nav-item"><a href="/about.html">About</a></li>
+      <li class="nav-item" style="float: right;">
+        <a href="contact.asp">Contact us</a>
+      </li>
+    </ul>
+    <div class=button-wraper>
+      <a href="about.html"><button class="buttons">Buy</button></a>
+      <a href="about.html"><button class="buttons">Sell</button></a>
+    </div>
+    <div class="footer-wraper">
+      <p class="footer-1">This is a temporary static website. Copyrights reserved. </p>
+  </body>
 
+  <style>
+    .title {
+      text-align: center;
+    }
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+    .nav-item {
+      float: left;
+    }
+    .nav-item a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .nav-item a:hover {
+      background-color: grey;
+    }
+    .buttons {
+      font-weight: bold;
+      background-color: #a11443;
+      border: none;
+      color: white;
+      padding: 42px 60px;
+      margin-top: 10%;
+      margin-left: 12.5%;
+      margin-right: 12.5%;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+    .footer-wraper {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: rgb(44, 44, 44);
+      color: white;
+      text-align: center;
+    }
+  </style>
 </html>
