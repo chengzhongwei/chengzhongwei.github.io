@@ -17,12 +17,12 @@
           size="25"
           required
         />
-        <button>Enter</button>
+        <button onclick="submitSearch()">Enter</button>
       </div>
       <nav class="buy-options">
         <ul>
           <li class="option-images">
-            <div class="option-block">
+            <div class="option-block" id="item-name">
               <img
                 class="options-img"
                 src="/src/computer.png"
@@ -106,11 +106,12 @@
       width: 50%;
     }
     .option-block {
-      display: block;
+      display: flex;
       padding: 10px;
     }
     .buy-options ul {
       list-style-type: none;
+      padding: 0px;
     }
     .buy-options ul li {
       display: inline;
@@ -123,4 +124,11 @@
       display: inline;
     }
   </style>
+  <script>
+    function submitSearch(e) {
+      e.preventdefault();
+      let str = e.target.value;
+      document.getElementById("search-bar").value = str;
+    }
+  </script>
 </html>
