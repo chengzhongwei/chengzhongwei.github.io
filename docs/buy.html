@@ -2,58 +2,171 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Homepage</title>
+    <title>Buy an item</title>
   </head>
 
   <body style="background-color: lightblue;">
-    <div class="slides">
-      <img class="slide-img" src="/src/computer.png" width="250" height="250" />
+    <div class="navbar-container">
+      <ul class="navbar">
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="/news.html">News</a></li>
+        <li class="nav-item"><a href="/about.html">About</a></li>
+        <li class="nav-item" style="float: right;">
+          <a href="status.html">Check status</a>
+        </li>
+      </ul>
     </div>
-    <div class="search-bar-area">
-      <input id="search-bar" placeholder="Enter items here" size="45" />
+    <div class="footer-wraper">
+      <p class="footer-1">
+        This is a temporary static website. Copyrights reserved.
+      </p>
     </div>
-    <div class="buy-options">
-      <img
-        class="options-img"
-        src="/src/computer.png"
-        width="100"
-        height="100"
-      />
-      <img
-        class="options-img"
-        src="/src/computer.png"
-        width="100"
-        height="100"
-      />
-      <img
-        class="options-img"
-        src="/src/computer.png"
-        width="100"
-        height="100"
-      />
-      <img
-        class="options-img"
-        src="/src/computer.png"
-        width="100"
-        height="100"
-      />
-      <img
-        class="options-img"
-        src="/src/computer.png"
-        width="100"
-        height="100"
-      />
-      <img
-        class="options-img"
-        src="/src/computer.png"
-        width="100"
-        height="100"
-      />
+    <div class="body-container" style="padding-top: 66px;">
+      <h2 class="form-title" style="text-align: center;">
+        Buy an item
+      </h2>
+      <form>
+        <div class="slides">
+          <div class="slide-arrow">&#9664</div>
+          <img
+            class="slide-image"
+            src="/src/computer.png"
+            width="60"
+            height="60"
+            style="padding: 10px;"
+          />
+          <div class="slide-arrow right">&#9654</div>
+        </div>
+        <div class="search-bar-area">
+          <input
+            id="search-bar"
+            placeholder="Enter items here"
+            size="25"
+            required
+          />
+          <button onclick="submitSearch()">Enter</button>
+        </div>
+        <nav class="buy-options">
+          <ul>
+            <li class="option-images">
+              <div class="option-block" id="item-name">
+                <img
+                  class="options-img"
+                  src="/src/computer.png"
+                  width="35"
+                  height="35"
+                />
+                <span>laptops and computers</span>
+              </div>
+            </li>
+            <li class="option-images">
+              <div class="option-block">
+                <img
+                  class="options-img"
+                  src="/src/computer.png"
+                  width="35"
+                  height="35"
+                />
+                <span>monitors</span>
+              </div>
+            </li>
+            <li class="option-images">
+              <div class="option-block">
+                <img
+                  class="options-img"
+                  src="/src/computer.png"
+                  width="35"
+                  height="35"
+                />
+                <span>Smart phones and tablets</span>
+              </div>
+            </li>
+            <li class="option-images">
+              <div class="option-block">
+                <img
+                  class="options-img"
+                  src="/src/computer.png"
+                  width="35"
+                  height="35"
+                />
+                <span>accesssaries</span>
+              </div>
+            </li>
+            <li class="option-images">
+              <div class="option-block">
+                <img
+                  class="options-img"
+                  src="/src/computer.png"
+                  width="35"
+                  height="35"
+                />
+                <span>gaming consoles and game cards</span>
+              </div>
+            </li>
+            <li class="option-images">
+              <div class="option-block">
+                <img
+                  class="options-img"
+                  src="/src/computer.png"
+                  width="35"
+                  height="35"
+                />
+                <span>others</span>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </form>
+    </div>
+    <div class="footer-wraper">
+      <p class="footer-1">
+        This is a temporary static website. Copyrights reserved.
+      </p>
     </div>
   </body>
   <style>
+    .navbar-container {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10px;
+      overflow: hidden;
+      background-color: #333;
+    }
+    .navbar li {
+      float: left;
+    }
+    .nav-item a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .nav-item a:hover {
+      background-color: grey;
+    }
+    .footer-wraper {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: rgb(44, 44, 44);
+      color: white;
+      text-align: center;
+    }
     .slides {
-      padding: 50px;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      position: relative;
+      padding: 15px;
       margin: auto;
       width: 50%;
     }
@@ -62,15 +175,38 @@
       width: 50%;
     }
     .buy-options {
-      padding: 10px;
-      padding-left: 10%;
       margin: auto;
-      width: 80%;
+      width: 50%;
+    }
+    .option-block {
+      display: flex;
+      padding: 10px;
+    }
+    .buy-options ul {
+      list-style-type: none;
+      
+      padding: 0px;
+    }
+    .buy-options ul li {
+      display: inline;
+    }
+    .buy-options ul li span {
+      vertical-align: baseline;
+      font-size: 20px;
     }
     .options-img {
-      padding: 12px;
-      margin-right: 10%;
-      margin-bottom: 15px;
+      display: inline;
+    }
+    .slide-arrow {
+      cursor: pointer;
+      font-size: 2rem;
     }
   </style>
+  <script>
+    function submitSearch(e) {
+      e.preventdefault();
+      let str = e.target.value;
+      document.getElementById("search-bar").value = str;
+    }
+  </script>
 </html>

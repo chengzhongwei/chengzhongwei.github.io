@@ -6,94 +6,156 @@
   </head>
 
   <body style="background-color: lightblue;">
-    <form>
-      <div class="slides">
-        <input type="file" id="image-upload" name="image-upload" />
-      </div>
-      <div class="search-bar-area">
-        <input
-          id="search-bar"
-          placeholder="Enter items here"
-          size="25"
-          required
-        />
-        <button onclick="submitSearch()">Enter</button>
-      </div>
-      <nav class="buy-options">
-        <ul>
-          <li class="option-images">
-            <div class="option-block" id="item-name">
-              <img
-                class="options-img"
-                src="/src/computer.png"
-                width="35"
-                height="35"
-              />
-              <span>laptops and computers</span>
-            </div>
-          </li>
-          <li class="option-images">
-            <div class="option-block">
-              <img
-                class="options-img"
-                src="/src/computer.png"
-                width="35"
-                height="35"
-              />
-              <span>monitors</span>
-            </div>
-          </li>
-          <li class="option-images">
-            <div class="option-block">
-              <img
-                class="options-img"
-                src="/src/computer.png"
-                width="35"
-                height="35"
-              />
-              <span>Smart phones and tablets</span>
-            </div>
-          </li>
-          <li class="option-images">
-            <div class="option-block">
-              <img
-                class="options-img"
-                src="/src/computer.png"
-                width="35"
-                height="35"
-              />
-              <span>accesssaries</span>
-            </div>
-          </li>
-          <li class="option-images">
-            <div class="option-block">
-              <img
-                class="options-img"
-                src="/src/computer.png"
-                width="35"
-                height="35"
-              />
-              <span>gaming consoles and game cards</span>
-            </div>
-          </li>
-          <li class="option-images">
-            <div class="option-block">
-              <img
-                class="options-img"
-                src="/src/computer.png"
-                width="35"
-                height="35"
-              />
-              <span>others</span>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </form>
+    <div class="navbar-container">
+      <ul class="navbar">
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="/news.html">News</a></li>
+        <li class="nav-item"><a href="/about.html">About</a></li>
+        <li class="nav-item" style="float: right;">
+          <a href="status.html">Check status</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-wraper">
+      <p class="footer-1">
+        This is a temporary static website. Copyrights reserved.
+      </p>
+    </div>
+    <div class="body-container" style="padding-top: 66px;">
+      <h2 class="form-title" style="text-align: center;">
+        Sell an item
+      </h2>
+      <form>
+        <div class="slides">
+          <input type="file" id="image-upload" name="image-upload" />
+        </div>
+        <div class="search-bar-area">
+          <input
+            id="search-bar"
+            placeholder="Enter items here"
+            size="25"
+            required
+          />
+          <button onclick="submitSearch()">Enter</button>
+        </div>
+        <nav class="buy-options">
+          <ul>
+            <li class="option-images">
+              <div class="option-block" id="item-name">
+                <img
+                  class="options-img"
+                  src="/src/computer.png"
+                  width="35"
+                  height="35"
+                />
+                <span>laptops and computers</span>
+              </div>
+            </li>
+            <li class="option-images">
+              <div class="option-block">
+                <img
+                  class="options-img"
+                  src="/src/computer.png"
+                  width="35"
+                  height="35"
+                />
+                <span>monitors</span>
+              </div>
+            </li>
+            <li class="option-images">
+              <div class="option-block">
+                <img
+                  class="options-img"
+                  src="/src/computer.png"
+                  width="35"
+                  height="35"
+                />
+                <span>Smart phones and tablets</span>
+              </div>
+            </li>
+            <li class="option-images">
+              <div class="option-block">
+                <img
+                  class="options-img"
+                  src="/src/computer.png"
+                  width="35"
+                  height="35"
+                />
+                <span>accesssaries</span>
+              </div>
+            </li>
+            <li class="option-images">
+              <div class="option-block">
+                <img
+                  class="options-img"
+                  src="/src/computer.png"
+                  width="35"
+                  height="35"
+                />
+                <span>gaming consoles and game cards</span>
+              </div>
+            </li>
+            <li class="option-images">
+              <div class="option-block">
+                <img
+                  class="options-img"
+                  src="/src/computer.png"
+                  width="35"
+                  height="35"
+                />
+                <span>others</span>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </form>
+    </div>
+    <div class="footer-wraper">
+      <p class="footer-1">
+        This is a temporary static website. Copyrights reserved.
+      </p>
+    </div>
   </body>
   <style>
+    .navbar-container {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10px;
+      overflow: hidden;
+      background-color: #333;
+    }
+    .navbar li {
+      float: left;
+    }
+    .nav-item a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .nav-item a:hover {
+      background-color: grey;
+    }
+    .footer-wraper {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: rgb(44, 44, 44);
+      color: white;
+      text-align: center;
+    }
     .slides {
-      padding: 50px;
+      position: relative;
+      padding: 15px;
       margin: auto;
       width: 50%;
     }

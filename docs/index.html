@@ -7,27 +7,10 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="theme-color" content="#000000" />
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-    <link
-      rel="manifest"
-      href="https://chengzhongwei.github.io/docs/packages.json"
-    />
     <link
       rel="shortcut icon"
       href="https://chengzhongwei.github.io/docs/favicon.ico"
     />
-    <!--
-      Notice the use of https://chengzhongwei.github.io in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "https://chengzhongwei.github.io/docs/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>Homepage</title>
   </head>
 
@@ -35,35 +18,51 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <h1 class="title">Welcome to Gear Up your lifestyle</h1>
-    <ul class="navbar">
-      <li class="nav-item"><a href="/">Home</a></li>
-      <li class="nav-item"><a href="/news.html">News</a></li>
-      <li class="nav-item"><a href="/about.html">About</a></li>
-      <li class="nav-item" style="float: right;">
-        <a href="status.html">Check status</a>
-      </li>
-    </ul>
-    <div class=button-wraper>
-      <a href="buy.html"><button class="buttons">Buy</button></a>
-      <a href="sell.html"><button class="buttons">Sell</button></a>
+    <div class="navbar-container">
+      <ul class="navbar">
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="/news.html">News</a></li>
+        <li class="nav-item"><a href="/about.html">About</a></li>
+        <li class="nav-item" style="float: right;">
+          <a href="status.html">Check status</a>
+        </li>
+      </ul>
+    </div>
+    <div class="body-wrapper" style="padding-top: 80px; margin-top: -10px;">
+      <h1 class="title">Welcome to Gear Up your lifestyle</h1>
+
+      <div class="button-wraper">
+        <a href="buy.html"><button class="buttons">Buy</button></a>
+        <a href="sell.html"><button class="buttons">Sell</button></a>
+      </div>
     </div>
     <div class="footer-wraper">
-      <p class="footer-1">This is a temporary static website. Copyrights reserved. </p>
+      <p class="footer-1">
+        This is a temporary static website. Copyrights reserved.
+      </p>
+    </div>
   </body>
 
   <style>
     .title {
-      text-align: center;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .navbar-container {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
     }
     .navbar {
       list-style-type: none;
       margin: 0;
-      padding: 0;
+      padding: 10px;
       overflow: hidden;
       background-color: #333;
     }
-    .nav-item {
+    .navbar li {
       float: left;
     }
     .nav-item a {
@@ -98,7 +97,7 @@
         margin-right: 12.5%;
       }
     }
-    
+
     .footer-wraper {
       position: fixed;
       left: 0;
