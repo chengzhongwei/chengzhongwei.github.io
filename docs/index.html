@@ -28,7 +28,7 @@
         </li>
       </ul>
     </div>
-    <div class="body-wrapper" style="padding-top: 80px; margin-top: -10px;">
+    <div class="body-container" style="padding-top: 80px; margin-top: -10px;">
       <h1 class="title">Welcome to Gear Up your lifestyle</h1>
 
       <div class="button-wraper">
@@ -75,15 +75,23 @@
     .nav-item a:hover {
       background-color: grey;
     }
+    .body-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .button-wraper {
+      display: inline-block;
+      justify-content: space-evenly;
+    }
     .buttons {
       font-weight: bold;
       background-color: #a11443;
       border: none;
       color: white;
       padding: 40px 50px;
-      margin-top: 10%;
-      margin-left: 12.5%;
-      margin-right: 12.5%;
+      margin: 50px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
@@ -92,9 +100,7 @@
     @media only screen and (max-width: 600px) {
       .buttons {
         padding: 24px 30px;
-        margin-top: 10%;
-        margin-left: 12.5%;
-        margin-right: 12.5%;
+        margin: 20px;
       }
     }
 
