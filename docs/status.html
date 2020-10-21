@@ -12,6 +12,17 @@
   </head>
 
   <body style="background-color: lightblue;">
+<div class="navbar-container">
+      <ul class="navbar">
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="/news.html">News</a></li>
+        <li class="nav-item"><a href="/about.html">About</a></li>
+        <li class="nav-item" style="float: right;">
+          <a href="status.html">Check status</a>
+        </li>
+      </ul>
+    </div>
+<div class="body-container">
     <div class="what-you-do">
       <div>What you do</div>
       <div class="provide-info">
@@ -44,6 +55,12 @@
         <i class="fas fa-times-circle"></i>
       </div>
     </div>
+</div>
+<div class="footer-wraper">
+      <p class="footer-1">
+        This is a temporary static website. Copyrights reserved.
+      </p>
+    </div>
   </body>
   <style>
     .what-you-do {
@@ -54,6 +71,45 @@
     }
     .final-part {
       padding: 30px;
+    }
+    .navbar-container {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10px;
+      overflow: hidden;
+      background-color: #333;
+    }
+    .navbar li {
+      float: left;
+    }
+    .nav-item a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .nav-item a:hover {
+      background-color: grey;
+    }
+    .body-container {
+      padding-top: 72px;
+    }
+    .footer-wraper {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: rgb(44, 44, 44);
+      color: white;
+      text-align: center;
     }
   </style>
 </html>
