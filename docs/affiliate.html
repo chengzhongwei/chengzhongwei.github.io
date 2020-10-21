@@ -7,6 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="https://unpkg.com/treeflex/dist/css/treeflex.css">
     <title>About</title>
   </head>
 
@@ -27,8 +28,63 @@
     </div>
     <div class="body-wrapper">
       <h1>Affiliated Program</h1>
-      <p>This affiliated program page </p>
+      <p>This affiliated program page showing the tree diagram </p>
     </div>
+
+
+    <div class="tf-tree" style="font-size: 14px;">
+      <ul>
+        <li>
+          <span class="tf-nc">You</span>
+          <ul>
+            <li>
+              <span class="tf-nc">20%</span>
+              <ul>
+                <li><span class="tf-nc">10%</span></li>
+                <li>
+                  <span class="tf-nc">10%</span>
+                  <ul>
+                    <li><span class="tf-nc">5%</span></li>
+                    <li><span class="tf-nc">5%</span></li>
+                  </ul>
+                </li>
+                <li><span class="tf-nc">10%</span></li>
+              </ul>
+            </li>
+            <li>
+              <span class="tf-nc">20%</span>
+              <ul>
+                <li><span class="tf-nc">10%</span></li>
+                <li><span class="tf-nc">10%</span></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+
+    <p>Calculate how much discount you will get for your next purchase now!</p>
+    <form onsubmit="return false"
+          oninput="discount.value =
+          level1.value * 0.2 + level2.value * 0.1 + level3.value * 0.05;">
+
+            Number of direct referred friends<input name="level1" id="level1" type="number">
+
+            <br />
+
+            Number of secondary referred friends<input name="level2" id="level2" type="number">
+
+            <br />
+
+            Number of third level referred friends<input name="level3" id="level3" type="number">
+
+            <br />
+
+            Total discount <output name="discount" id="discount" for = "total discount"></output>
+
+    </form>
+
     <div class="footer-wraper">
       <p class="footer-1">
         This is a temporary static website. Copyrights reserved.
