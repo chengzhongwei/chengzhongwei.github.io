@@ -38,8 +38,12 @@
           />
           <button onclick="submitSearch()">Enter</button>
         </div>
-        <nav class="buy-options">
+
+
+                <nav class="buy-options">
           <ul>
+            <div class="row">
+            <div class="column">
             <li class="option-images">
               <div class="option-block" id="item-name">
                 <img
@@ -51,6 +55,9 @@
                 <span>laptops and computers</span>
               </div>
             </li>
+            </div>
+
+            <div class="column">
             <li class="option-images">
               <div class="option-block">
                 <img
@@ -62,6 +69,9 @@
                 <span>monitors</span>
               </div>
             </li>
+            </div>
+
+            <div class="column">
             <li class="option-images">
               <div class="option-block">
                 <img
@@ -73,6 +83,11 @@
                 <span>Smart phones and tablets</span>
               </div>
             </li>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
             <li class="option-images">
               <div class="option-block">
                 <img
@@ -84,6 +99,9 @@
                 <span>accesssaries</span>
               </div>
             </li>
+            </div>
+
+            <div class="column">
             <li class="option-images">
               <div class="option-block">
                 <img
@@ -95,6 +113,9 @@
                 <span>gaming consoles and game cards</span>
               </div>
             </li>
+            </div>
+
+            <div class="column">
             <li class="option-images">
               <div class="option-block">
                 <img
@@ -106,7 +127,9 @@
                 <span>others</span>
               </div>
             </li>
-          </ul>
+            </div>
+        </div>
+        </ul>
         </nav>
       </form>
     </div>
@@ -185,6 +208,18 @@
     .options-img {
       display: inline;
     }
+
+    .column {
+    float: left;
+    width: 33.3%;
+    }
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+        }
+
   </style>
   <script>
     function submitSearch(e) {
