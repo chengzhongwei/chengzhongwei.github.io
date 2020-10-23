@@ -12,67 +12,113 @@
   </head>
 
   <body style="background-color: lightblue;">
-<div class="navbar-container">
+    <div class="navbar-container">
       <ul class="navbar">
         <li class="nav-item"><a href="/">Home</a></li>
         <li class="nav-item"><a href="/news.html">News</a></li>
         <li class="nav-item"><a href="/about.html">About</a></li>
-        <li class="nav-item"><a href="/affiliate.html">Affiliated Program</a></li>
+        <li class="nav-item">
+          <a href="/affiliate.html">Affiliated Program</a>
+        </li>
         <li class="nav-item" style="float: right;">
           <a href="status.html">Check status</a>
         </li>
       </ul>
     </div>
-<div class="body-container">
-    <div class="what-you-do">
-      <div>What you do</div>
-      <div class="provide-info">
-        Provide Information
-        <i class="fas fa-check-circle"></i>
+    <div class="body-container">
+      <div class="order-info">
+        <div class="order-number">
+          Order number: 123456789 <br />Confirmation date: 10/22/2020
+        </div>
+        <div class="order-image">
+          <img src="src/computer.png" width="80px" height="60px" />
+        </div>
       </div>
-      <div class="provide-lable">
-        Provide Free Label
-        <i class="fas fa-check-circle"></i>
+      <div class="flex-row">
+        <div class="flex-col" id="what-you-do">
+          <div class="status-title">
+            What you do
+          </div>
+          <div class="status-item" id="provide-info">
+            Provide Information
+            <i class="fas fa-check-circle" onclick="reverse(this)"></i>
+          </div>
+          <div id="provide-lable">
+            Provide Free Label
+            <i class="fas fa-check-circle" onclick="reverse(this)"></i>
+          </div>
+          <div id="ship-it">
+            Ship it to us
+            <i class="fas fa-times-circle" onclick="reverse(this)"></i>
+          </div>
+        </div>
+        <div class="flex-col" id="what-we-do">
+          <div class="status-title">
+            What we do
+          </div>
+          <div id="provide-quote">
+            Provide Quote
+            <i class="fas fa-times-circle" onclick="reverse(this)"></i>
+          </div>
+          <div id="verify-product">
+            Verify your product
+            <i class="fas fa-times-circle" onclick="reverse(this)"></i>
+          </div>
+        </div>
       </div>
-      <div class="ship-it">
-        Ship it to us
-        <i class="fas fa-times-circle"></i>
+      <div class="flex-row">
+        <div class="flex-col" id="receive-payment">
+          Receive Payment
+          <i class="fas fa-times-circle" onclick="reverse(this)"></i>
+        </div>
       </div>
     </div>
-    <div class="what-we-do">
-      <div>What we do</div>
-      <div class="provide-quote">
-        Provide Quote
-        <i class="fas fa-times-circle"></i>
-      </div>
-      <div class="verify-product">
-        Verify your product
-        <i class="fas fa-times-circle"></i>
-      </div>
-    </div>
-    <div class="final-part">
-      <div class="receive-payment">
-        Receive Payment
-        <i class="fas fa-times-circle"></i>
-      </div>
-    </div>
-</div>
-<div class="footer-wraper">
+    <div class="footer-wraper">
       <p class="footer-1">
         This is a temporary static website. Copyrights reserved.
       </p>
     </div>
   </body>
   <style>
-    .what-you-do {
+    .order-info {
       padding: 30px;
     }
-    .what-we-do {
-      padding: 30px;
+    .order-image {
+      padding-top: 15px;
     }
-    .final-part {
-      padding: 30px;
+    .flex-row {
+      display: flex;
+      justify-content: space-evenly;
     }
+    .flex-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      border: 2px dotted darkgreen;
+      border-radius: 10px;
+      margin: 15px;
+    }
+    .status-title {
+      font: 25px bold;
+      color: red;
+    }
+    #what-you-do {
+      height: 150px;
+      padding: 10px;
+      text-align: center;
+    }
+    #what-we-do {
+      height: 150px;
+      padding: 10px;
+      text-align: center;
+    }
+    #receive-payment {
+      height: 40px;
+      width: 120px;
+      padding: 30px;
+      text-align: center;
+    }
+
     .navbar-container {
       display: block;
       position: fixed;
@@ -102,6 +148,7 @@
     }
     .body-container {
       padding-top: 72px;
+      padding-bottom: 60px;
     }
     .footer-wraper {
       position: fixed;
@@ -113,4 +160,13 @@
       text-align: center;
     }
   </style>
+  <script>
+    function reverse(el) {
+      var element = el;
+      element.className =
+        element.className == "fas fa-check-circle"
+          ? "fas fa-times-circle"
+          : "fas fa-check-circle";
+    }
+  </script>
 </html>
