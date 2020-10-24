@@ -103,7 +103,7 @@
 .menu__link:focus,
 .menu__link[data-submenu]:hover::after,
 .menu__link[data-submenu]:focus::after {
-	color: #5c5edc;
+	color: #63c6eb;
 }
 
 .menu__link--current::before {
@@ -114,7 +114,7 @@
 	top: 50%;
 	left: 0.5em;
 	height: 4px;
-	color: #5c5edc;
+	color: #63c6eb;
 }
 
 [class^='animate-'],
