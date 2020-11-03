@@ -2,178 +2,130 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-    <style>
-      .mySlides {display:none;}
-      .w3-content {display:flex;justify-content: center;}
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Buy an item</title>
   </head>
 
   <body style="background-color: lightblue;">
     <div class="navbar-container">
+      <div class="logo-block">
+        <a href="/">
+          <img src="/src/logo.PNG" />
+        </a>
+      </div>
       <ul class="navbar">
-        <li class="nav-item"><a href="/">Home</a></li>
-        <li class="nav-item"><a href="/news.html">News</a></li>
         <li class="nav-item"><a href="/about.html">About</a></li>
+        <li class="nav-item">
+          <a href="/affiliate.html">Affiliated Program</a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact.html">Contact Us</a>
+        </li>
         <li class="nav-item" style="float: right;">
           <a href="status.html">Check status</a>
         </li>
       </ul>
     </div>
-    <div class="footer-wraper">
-      <p class="footer-1">
-        This is a temporary static website. Copyrights reserved.
-      </p>
-    </div>
-    <div class="body-container" style="padding-top: 66px;">
-      <h2 class="form-title" style="text-align: center;">
-        Buy an item
-      </h2>
-      <form>
-        <!--
-        <div class="slides">
-          <div class="slide-arrow">&#9664</div>
-          <img
-            class="slide-image"
-            src="/src/computer.png"
-            width="60"
-            height="60"
-            style="padding: 10px;"
-          />
-          <div class="slide-arrow right">&#9654</div>
-        </div>
-        -->
-
-        <div class="w3-content w3-display-container">
-        <img class="mySlides" src="./src/comp1.jpg" style="height:240px">
-        <img class="mySlides" src="./src/comp2.jpg" style="height:240px">
-        <img class="mySlides" src="./src/comp3.jpg" style="height:240px">
-
-
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-        </div>
-
-
-        <div class="search-bar-area">
-          <input
-            id="search-bar"
-            placeholder="Enter items here"
-            size="25"
-            required
-          />
-          <button onclick="submitSearch()">Enter</button>
-        </div>
-
-
-        <nav class="buy-options">
-          <ul>
-            <div class="row">
+    <div class="body-container">
+      <nav class="buy-options">
+        <ul>
+          <div class="row">
             <div class="column">
-            <li class="option-images">
-              <div class="option-block" id="item-name">
-                <img
-                  class="options-img"
-                  src="/src/computer.png"
-                  width="35"
-                  height="35"
-                />
-                <span><a href="./sample_computer.html">laptops and computers </a></span>
-              </div>
-            </li>
+              <li class="option-images">
+                <div class="option-block" id="item-name">
+                  <a href="./sample_computer.html">
+                    <img class="options-img" src="/src/computer.png" />
+                    <div class="img-text">Laptop & Computer</div></a
+                  >
+                </div>
+              </li>
             </div>
 
             <div class="column">
-            <li class="option-images">
-              <div class="option-block">
-                <img
-                  class="options-img"
-                  src="/src/computer.png"
-                  width="35"
-                  height="35"
-                />
-                <span>monitors</span>
-              </div>
-            </li>
+              <li class="option-images">
+                <div class="option-block" id="item-name">
+                  <a href="./sample_computer.html">
+                    <img class="options-img" src="/src/computer.png" />
+                    <div class="img-text">Monitor</div></a
+                  >
+                </div>
+              </li>
             </div>
 
             <div class="column">
-            <li class="option-images">
-              <div class="option-block">
-                <img
-                  class="options-img"
-                  src="/src/computer.png"
-                  width="35"
-                  height="35"
-                />
-                <span>Smart phones and tablets</span>
-              </div>
-            </li>
+              <li class="option-images">
+                <div class="option-block" id="item-name">
+                  <a href="./sample_computer.html">
+                    <img class="options-img" src="/src/computer.png" />
+                    <div class="img-text">Phone & Smart Watch</div></a
+                  >
+                </div>
+              </li>
             </div>
-        </div>
+          </div>
 
-        <div class="row">
+          <div class="row">
             <div class="column">
-            <li class="option-images">
-              <div class="option-block">
-                <img
-                  class="options-img"
-                  src="/src/computer.png"
-                  width="35"
-                  height="35"
-                />
-                <span>accesssaries</span>
-              </div>
-            </li>
+              <li class="option-images">
+                <div class="option-block" id="item-name">
+                  <a href="./sample_computer.html">
+                    <img class="options-img" src="/src/computer.png" />
+                    <div class="img-text">PC Component</div></a
+                  >
+                </div>
+              </li>
             </div>
 
             <div class="column">
-            <li class="option-images">
-              <div class="option-block">
-                <img
-                  class="options-img"
-                  src="/src/computer.png"
-                  width="35"
-                  height="35"
-                />
-                <span>gaming consoles and game cards</span>
-              </div>
-            </li>
+              <li class="option-images">
+                <div class="option-block" id="item-name">
+                  <a href="./sample_computer.html">
+                    <img class="options-img" src="/src/computer.png" />
+                    <div class="img-text">Accessories</div></a
+                  >
+                </div>
+              </li>
             </div>
 
             <div class="column">
-            <li class="option-images">
-              <div class="option-block">
-                <img
-                  class="options-img"
-                  src="/src/computer.png"
-                  width="35"
-                  height="35"
-                />
-                <span>others</span>
-              </div>
-            </li>
+              <li class="option-images">
+                <div class="option-block" id="item-name">
+                  <a href="./sample_computer.html">
+                    <img class="options-img" src="/src/computer.png" />
+                    <div class="img-text">Gaming Console</div></a
+                  >
+                </div>
+              </li>
             </div>
-        </div>
+          </div>
         </ul>
-        </nav>
-
-      </form>
-
+      </nav>
     </div>
-  </body>
 
+    <footer class="footer-wraper">
+      <p class="footer-1">
+        E-GearUp © 2020
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://discord.gg/2cwxJHw69Y">
+          <i class="fab fa-discord"></i>
+        </a>
+      </p>
+    </footer>
+  </body>
   <style>
     .navbar-container {
       display: block;
-      position: fixed;
+      position: relative;
       top: 0;
       left: 0;
       right: 0;
+    }
+    .logo-block {
+      background-color: #475359;
+      margin: 0 0 20px 0;
+      border: 2px solid rgb(177, 177, 177);
     }
     .navbar {
       list-style-type: none;
@@ -181,6 +133,7 @@
       padding: 10px;
       overflow: hidden;
       background-color: #333;
+      border: 2px solid rgb(177, 177, 177);
     }
     .navbar li {
       float: left;
@@ -195,69 +148,101 @@
     .nav-item a:hover {
       background-color: grey;
     }
+    .body-container {
+      padding-top: 0;
+      padding-bottom: 121px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
     .footer-wraper {
       position: fixed;
-      left: 0;
-      bottom: 0;
       width: 100%;
-      background-color: rgb(44, 44, 44);
+      bottom: 0;
+      left: 0;
+      background-position: top left;
+      background-repeat: no-repeat;
+      border-top: 0;
+      background-size: auto;
+      color: #6a737c;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: #475359;
       color: white;
+      padding: 30px 0 30px 0;
       text-align: center;
     }
-    .slides {
-      display: flex;
-      justify-content:center;
-      align-items: center;
-      position: relative;
-      padding: 15px;
-      margin: auto;
-      width: 50%;
-    }
-    .search-bar-area {
-      padding: 20px;
-      display: flex;
-      margin: auto;
-      width: 50%;
-      justify-content: center;
+    .footer-1 {
+      font-size: 20px;
+      font-family: "Lucida Console", Courier, monospace;
     }
     .buy-options {
       margin: auto;
-      width: 50%;
+      width: 100%;
     }
     .option-block {
       display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
       padding: 10px;
+      border: 3px solid grey;
+      border-radius: 6px;
+      margin: 20px 50px 20px 50px;
+      box-shadow: 2px 3px;
     }
     .buy-options ul {
       list-style-type: none;
-      
       padding: 0px;
     }
     .buy-options ul li {
       display: inline;
     }
-    .buy-options ul li span {
+    .img-text {
       vertical-align: baseline;
-      font-size: 20px;
+      font-size: 22px;
     }
     .options-img {
+      width: 100px;
+      height: 100px;
       display: inline;
+      opacity: 40%;
     }
-    .slide-arrow {
-      cursor: pointer;
-      font-size: 2rem;
-    }
-
     .column {
-    float: left;
-    width: 33.3%;
+      float: left;
+      width: 33.3%;
     }
 
     .row:after {
-    content: "";
-    display: table;
-    clear: both;
-        }
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .img-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @media only screen and (max-width: 650px) {
+      .logo-block a img {
+        width: 250px;
+      }
+      .body-container {
+        padding-top: 40px;
+      }
+      .options-img {
+        width: 75px;
+        height: 75px;
+      }
+      .img-text {
+        font-size: 18px;
+      }
+      .option-block {
+        margin: 10px 10px 10px 10px;
+      }
+    }
   </style>
   <script>
     function submitSearch(e) {
@@ -267,65 +252,68 @@
     }
   </script>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <!-- https://jquery.com/download/ -->
-    <script src="js/moment.min.js"></script>
-    <!-- https://momentjs.com/ -->
-    <script src="js/utils.js"></script>
-    <script src="js/Chart.min.js"></script>
-    <!-- http://www.chartjs.org/docs/latest/ -->
-    <script src="js/fullcalendar.min.js"></script>
-    <!-- https://fullcalendar.io/ -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- https://getbootstrap.com/ -->
-    <script src="js/tooplate-scripts.js"></script>
-    <script>
-        let ctxLine,
-            ctxBar,
-            ctxPie,
-            optionsLine,
-            optionsBar,
-            optionsPie,
-            configLine,
-            configBar,
-            configPie,
-            lineChart;
-        barChart, pieChart;
-        // DOM is ready
-        $(function () {
-            updateChartOptions();
-            drawLineChart(); // Line Chart
-            drawBarChart(); // Bar Chart
-            drawPieChart(); // Pie Chart
-            drawCalendar(); // Calendar
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <!-- https://jquery.com/download/ -->
+  <script src="js/moment.min.js"></script>
+  <!-- https://momentjs.com/ -->
+  <script src="js/utils.js"></script>
+  <script src="js/Chart.min.js"></script>
+  <!-- http://www.chartjs.org/docs/latest/ -->
+  <script src="js/fullcalendar.min.js"></script>
+  <!-- https://fullcalendar.io/ -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- https://getbootstrap.com/ -->
+  <script src="js/tooplate-scripts.js"></script>
+  <script>
+    let ctxLine,
+      ctxBar,
+      ctxPie,
+      optionsLine,
+      optionsBar,
+      optionsPie,
+      configLine,
+      configBar,
+      configPie,
+      lineChart;
+    barChart, pieChart;
+    // DOM is ready
+    $(function () {
+      updateChartOptions();
+      drawLineChart(); // Line Chart
+      drawBarChart(); // Bar Chart
+      drawPieChart(); // Pie Chart
+      drawCalendar(); // Calendar
 
-            $(window).resize(function () {
-                updateChartOptions();
-                updateLineChart();
-                updateBarChart();
-                reloadPage();
-            });
-        })
-    </script>
+      $(window).resize(function () {
+        updateChartOptions();
+        updateLineChart();
+        updateBarChart();
+        reloadPage();
+      });
+    });
+  </script>
 
-    <script>
-          var slideIndex = 1;
-          showDivs(slideIndex);
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
 
-          function plusDivs(n) {
-            showDivs(slideIndex += n);
-          }
+    function plusDivs(n) {
+      showDivs((slideIndex += n));
+    }
 
-          function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = x.length}
-            for (i = 0; i < x.length; i++) {
-              x[i].style.display = "none";
-            }
-            x[slideIndex-1].style.display = "block";
-          }
-    </script>
-
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = x.length;
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
 </html>
