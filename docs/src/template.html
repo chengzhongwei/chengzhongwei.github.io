@@ -11,38 +11,66 @@
       rel="shortcut icon"
       href="https://chengzhongwei.github.io/docs/favicon.ico"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+
     <title>Homepage</title>
+    <!-- edit title here-->
   </head>
   <body style="background-color: lightblue;">
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div class="navbar-container">
+      <div class="logo-block">
+        <a href="/">
+          <img src="/src/logo.PNG" />
+        </a>
+      </div>
       <ul class="navbar">
-        <li class="nav-item"><a href="/">Home</a></li>
-        <li class="nav-item"><a href="/news.html">News</a></li>
         <li class="nav-item"><a href="/about.html">About</a></li>
+        <li class="nav-item">
+          <a href="/affiliate.html">Affiliated Program</a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact.html">Contact Us</a>
+        </li>
         <li class="nav-item" style="float: right;">
           <a href="status.html">Check status</a>
         </li>
       </ul>
     </div>
-    <div class="body-container" style="padding-top:66px;">
-	<!-- contents here -->
+    <div class="body-container">
+      <div id="mock-content"></div>
+      <!-- contents here -->
     </div>
-    <div class="footer-wraper">
+    <footer class="footer-wraper">
       <p class="footer-1">
-        This is a temporary static website. Copyrights reserved.
+        E-GearUp © 2020
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://discord.gg/2cwxJHw69Y">
+          <i class="fab fa-discord"></i>
+        </a>
       </p>
-    </div>
+    </footer>
   </body>
   <style>
     .navbar-container {
       display: block;
-      position: fixed;
+      position: relative;
       top: 0;
       left: 0;
       right: 0;
+    }
+    .logo-block {
+      background-color: #475359;
+      margin: 0 0 20px 0;
+      border: 2px solid rgb(177, 177, 177);
     }
     .navbar {
       list-style-type: none;
@@ -50,6 +78,7 @@
       padding: 10px;
       overflow: hidden;
       background-color: #333;
+      border: 2px solid rgb(177, 177, 177);
     }
     .navbar li {
       float: left;
@@ -65,16 +94,30 @@
       background-color: grey;
     }
     .body-container {
-      padding-top: 72px;
+      padding-top: 20px;
     }
     .footer-wraper {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background-color: rgb(44, 44, 44);
+      background-position: top left;
+      background-repeat: no-repeat;
+      border-top: 0;
+      background-size: auto;
+      color: #6a737c;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: #475359;
       color: white;
+      padding: 30px 0 30px 0;
       text-align: center;
+    }
+    .footer-1 {
+      font-size: 20px;
+      font-family: "Lucida Console", Courier, monospace;
+    }
+    #mock-content {
+      padding: 10px;
+      padding-bottom: 2000px;
+      margin-bottom: 60px;
+      background-color: red;
     }
   </style>
 </html>
