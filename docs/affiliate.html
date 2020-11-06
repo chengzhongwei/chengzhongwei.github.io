@@ -9,117 +9,161 @@
     <meta name="theme-color" content="#000000" />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/treeflex/dist/css/treeflex.css"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
     />
-    <title>About</title>
+    <title>Affiliated Program</title>
   </head>
 
-  <body>
+  <body style="background-color: lightblue;">
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div class="navbar-container">
+      <div class="logo-block">
+        <a href="/">
+          <img src="/src/logo.PNG" />
+        </a>
+      </div>
       <ul class="navbar">
-        <li class="nav-item"><a href="/">Home</a></li>
-        <li class="nav-item"><a href="/news.html">News</a></li>
         <li class="nav-item"><a href="/about.html">About</a></li>
         <li class="nav-item">
           <a href="/affiliate.html">Affiliated Program</a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact.html">Contact Us</a>
         </li>
         <li class="nav-item" style="float: right;">
           <a href="status.html">Check status</a>
         </li>
       </ul>
     </div>
-    <div class="body-wrapper">
-      <h1>Affiliated Program</h1>
-      <p>This affiliated program page showing the tree diagram</p>
-    </div>
 
-    <div class="tf-tree" style="font-size: 14px;">
-      <ul>
-        <li>
-          <span class="tf-nc">You</span>
-          <ul>
-            <li>
-              <span class="tf-nc">0.20%</span>
-              <ul>
-                <li><span class="tf-nc">0.10%</span></li>
-                <li>
-                  <span class="tf-nc">0.10%</span>
-                  <ul>
-                    <li><span class="tf-nc">0.50%</span></li>
-                    <li><span class="tf-nc">0.50%</span></li>
-                  </ul>
-                </li>
-                <li><span class="tf-nc">0.10%</span></li>
-              </ul>
-            </li>
-            <li>
-              <span class="tf-nc">0.20%</span>
-              <ul>
-                <li><span class="tf-nc">0.10%</span></li>
-                <li><span class="tf-nc">0.10%</span></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+    <div class="body-container">
+      <div class="graph-info">
+        <h1>Affiliated Program</h1>
+        <p class="graph-info-text" style="font-size: 20px;">
+          How about neaming some cash back or store discount for your next
+          purchase?<br />
+          Check out our affiliated program!<br />
+          When you refer our website to your friends and they made any
+          transactions on your site, you can get a 10% discount on your next
+          purchase. <br />What is the best part? This discount can be
+          accumulated for more friends you referred! And can even get discounts
+          for people they refer to!<br />
+          Use the tool below to calculate how much you can save today!
+        </p>
+      </div>
+      <div class="tf-tree">
+        <ul>
+          <li>
+            <span class="tf-nc">You</span>
+            <ul>
+              <li>
+                <span class="tf-nc">0.20%</span>
+                <ul>
+                  <li><span class="tf-nc">0.10%</span></li>
+                  <li>
+                    <span class="tf-nc">0.10%</span>
+                    <ul>
+                      <li><span class="tf-nc">0.05%</span></li>
+                      <li><span class="tf-nc">0.05%</span></li>
+                    </ul>
+                  </li>
+                  <li><span class="tf-nc">0.10%</span></li>
+                </ul>
+              </li>
+              <li>
+                <span class="tf-nc">0.20%</span>
+                <ul>
+                  <li><span class="tf-nc">0.10%</span></li>
+                  <li><span class="tf-nc">0.10%</span></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
 
-    <p>Calculate how much discount you will get for your next purchase now!</p>
-    <form
-      onsubmit="return false"
-      oninput="discount.value =
+      <form
+        class="drag-section"
+        onsubmit="return false"
+        oninput="discount.value =
          (level1.value * 20 + level2.value * 10 + level3.value * 5)/100;"
-    >
-      Number of direct referred friends<input
-        name="level1"
-        id="level1"
-        type="range"
-        value="5"
-        max="25"
-      />
-      <span id="output1"></span>
-      <br />
-
-      Number of secondary referred friends<input
-        name="level2"
-        id="level2"
-        type="range"
-        value="5"
-        max="50"
-      />
-      <span id="output2"></span>
-      <br />
-
-      Number of third level referred friends<input
-        name="level3"
-        id="level3"
-        type="range"
-        value="5"
-        max="50"
-      />
-      <span id="output3"></span>
-      <br />
-
-      Total discount
-      <output name="discount" id="discount" for="total discount">1.75</output>%
-    </form>
-
-    <div class="footer-wraper">
-      <p class="footer-1">
-        This is a temporary static website. Copyrights reserved.
-      </p>
+      >
+        <div class="drag-row">
+          <div class="dragging-block">
+            <span class="drag-text">First Level Referral</span
+            ><input
+              class="dragging-block"
+              name="level1"
+              id="level1"
+              type="range"
+              value="5"
+              max="25"
+            />
+            <span id="output1"></span>
+          </div>
+          <div class="dragging-block">
+            <span class="drag-text">Second Level Referral</span
+            ><input
+              class="dragging-block"
+              name="level2"
+              id="level2"
+              type="range"
+              value="5"
+              max="50"
+            />
+            <span id="output2"></span>
+          </div>
+          <div class="dragging-block">
+            <span class="drag-text">Third Level Referral</span
+            ><input
+              class="dragging-block"
+              name="level3"
+              id="level3"
+              type="range"
+              value="5"
+              max="50"
+            />
+            <span id="output3"></span>
+          </div>
+        </div>
+        <div class="drag-row">
+          <div class="result-block">
+            Total discount
+            <output name="discount" id="discount" for="total discount"
+              >1.75</output
+            >%
+          </div>
+        </div>
+      </form>
     </div>
+
+    <footer class="footer-wraper">
+      <p class="footer-1">
+        E-GearUp © 2020
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://discord.gg/2cwxJHw69Y">
+          <i class="fab fa-discord"></i>
+        </a>
+      </p>
+    </footer>
   </body>
   <style>
     .navbar-container {
       display: block;
-      position: fixed;
+      position: relative;
       top: 0;
       left: 0;
       right: 0;
+    }
+    .logo-block {
+      background-color: #475359;
+      margin: 0 0 20px 0;
+      border: 2px solid rgb(177, 177, 177);
     }
     .navbar {
       list-style-type: none;
@@ -127,6 +171,7 @@
       padding: 10px;
       overflow: hidden;
       background-color: #333;
+      border: 2px solid rgb(177, 177, 177);
     }
     .navbar li {
       float: left;
@@ -141,19 +186,233 @@
     .nav-item a:hover {
       background-color: grey;
     }
-    .body-wrapper {
-      margin-top: -10px;
-      padding-top: 90px;
-      padding-left: 30px;
+    .body-container {
+      padding-top: 0;
+      padding-bottom: 121px;
+      display: flex;
+      justify-content: center;
+      /*align-items: center;*/
+      flex-direction: column;
+    }
+    .graph-info {
+      padding-left: 20px;
+    }
+    .graph-info-text {
+      background-color: white;
+      padding: 10px;
+      margin: 10px 30px 40px 10px;
+      border: 1px solid rgb(27, 7, 114);
+      box-shadow: 5px 5px #888888;
+      border-radius: 5px;
+    }
+    .tf-tree {
+      font-size: 16px;
+      overflow: auto;
+    }
+    .tf-tree * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .tf-tree ul {
+      display: inline-flex;
+    }
+    .tf-tree li {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0 1em;
+      position: relative;
+    }
+    .tf-tree li ul {
+      margin: 2em 0;
+    }
+    .tf-tree li li:before {
+      border-top: 0.0625em solid #000;
+      content: "";
+      display: block;
+      height: 0.0625em;
+      left: -0.03125em;
+      position: absolute;
+      top: -1.03125em;
+      width: 100%;
+    }
+    .tf-tree li li:first-child:before {
+      left: calc(50% - 0.03125em);
+      max-width: calc(50% + 0.0625em);
+    }
+    .tf-tree li li:last-child:before {
+      left: auto;
+      max-width: calc(50% + 0.0625em);
+      right: calc(50% - 0.03125em);
+    }
+    .tf-tree li li:only-child:before {
+      display: none;
+    }
+    .tf-tree li li:only-child > .tf-nc:before,
+    .tf-tree li li:only-child > .tf-node-content:before {
+      height: 1.0625em;
+      top: -1.0625em;
+    }
+    .tf-tree .tf-nc,
+    .tf-tree .tf-node-content {
+      border: 0.0625em solid #000;
+      display: inline-block;
+      background-color: rgb(204, 204, 204);
+      padding: 0.5em 1em;
+      position: relative;
+    }
+    .tf-tree .tf-nc:before,
+    .tf-tree .tf-node-content:before {
+      top: -1.03125em;
+    }
+    .tf-tree .tf-nc:after,
+    .tf-tree .tf-nc:before,
+    .tf-tree .tf-node-content:after,
+    .tf-tree .tf-node-content:before {
+      border-left: 0.0625em solid #000;
+      content: "";
+      display: block;
+      height: 1em;
+      left: calc(50% - 0.03125em);
+      position: absolute;
+      width: 0.0625em;
+    }
+    .tf-tree .tf-nc:after,
+    .tf-tree .tf-node-content:after {
+      top: calc(100% + 0.03125em);
+    }
+    .tf-tree .tf-nc:only-child:after,
+    .tf-tree .tf-node-content:only-child:after,
+    .tf-tree > ul > li > .tf-nc:before,
+    .tf-tree > ul > li > .tf-node-content:before {
+      display: none;
+    }
+    .tf-tree.tf-gap-sm li {
+      padding: 0 0.6em;
+    }
+    .tf-tree.tf-gap-sm li > .tf-nc:before,
+    .tf-tree.tf-gap-sm li > .tf-node-content:before {
+      height: 0.6em;
+      top: -0.6em;
+    }
+    .tf-tree.tf-gap-sm li > .tf-nc:after,
+    .tf-tree.tf-gap-sm li > .tf-node-content:after {
+      height: 0.6em;
+    }
+    .tf-tree.tf-gap-sm li ul {
+      margin: 1.2em 0;
+    }
+    .tf-tree.tf-gap-sm li li:before {
+      top: -0.63125em;
+    }
+    .tf-tree.tf-gap-sm li li:only-child > .tf-nc:before,
+    .tf-tree.tf-gap-sm li li:only-child > .tf-node-content:before {
+      height: 0.6625em;
+      top: -0.6625em;
+    }
+    .tf-tree.tf-gap-lg li {
+      padding: 0 1.5em;
+    }
+    .tf-tree.tf-gap-lg li > .tf-nc:before,
+    .tf-tree.tf-gap-lg li > .tf-node-content:before {
+      height: 1.5em;
+      top: -1.5em;
+    }
+    .tf-tree.tf-gap-lg li > .tf-nc:after,
+    .tf-tree.tf-gap-lg li > .tf-node-content:after {
+      height: 1.5em;
+    }
+    .tf-tree.tf-gap-lg li ul {
+      margin: 3em 0;
+    }
+    .tf-tree.tf-gap-lg li li:before {
+      top: -1.53125em;
+    }
+    .tf-tree.tf-gap-lg li li:only-child > .tf-nc:before,
+    .tf-tree.tf-gap-lg li li:only-child > .tf-node-content:before {
+      height: 1.5625em;
+      top: -1.5625em;
+    }
+    .tf-tree li.tf-dotted-children .tf-nc:after,
+    .tf-tree li.tf-dotted-children .tf-nc:before,
+    .tf-tree li.tf-dotted-children .tf-node-content:after,
+    .tf-tree li.tf-dotted-children .tf-node-content:before {
+      border-left-style: dotted;
+    }
+    .tf-tree li.tf-dotted-children li:before {
+      border-top-style: dotted;
+    }
+    .tf-tree li.tf-dotted-children > .tf-nc:before,
+    .tf-tree li.tf-dotted-children > .tf-node-content:before {
+      border-left-style: solid;
+    }
+    .tf-tree li.tf-dashed-children .tf-nc:after,
+    .tf-tree li.tf-dashed-children .tf-nc:before,
+    .tf-tree li.tf-dashed-children .tf-node-content:after,
+    .tf-tree li.tf-dashed-children .tf-node-content:before {
+      border-left-style: dashed;
+    }
+    .tf-tree li.tf-dashed-children li:before {
+      border-top-style: dashed;
+    }
+    .tf-tree li.tf-dashed-children > .tf-nc:before,
+    .tf-tree li.tf-dashed-children > .tf-node-content:before {
+      border-left-style: solid;
+    }
+    .drag-section {
+      font-size: 14px;
+      padding-left: 20px;
+    }
+    .drag-row {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .dragging-block {
+      text-align: center;
+      width: 30%;
+      display: inline-block;
+      background-color: rgb(255, 255, 255);
+      margin: 10px;
+
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+    .result-block {
+      background-color: rgb(255, 255, 255);
+      margin: 10px;
+      font-size: 20px;
+      padding: 10px 40px;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+    @media only screen and (max-width: 500px) {
+      .logo-block a img {
+        width: 250px;
+      }
     }
     .footer-wraper {
       position: fixed;
-      left: 0;
-      bottom: 0;
       width: 100%;
-      background-color: rgb(44, 44, 44);
+      bottom: 0;
+      left: 0;
+      background-position: top left;
+      background-repeat: no-repeat;
+      border-top: 0;
+      background-size: auto;
+      color: #6a737c;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: #475359;
       color: white;
+      padding: 30px 0 30px 0;
       text-align: center;
+    }
+    .footer-1 {
+      font-size: 20px;
+      font-family: "Lucida Console", Courier, monospace;
     }
   </style>
   <script>
